@@ -180,6 +180,12 @@ a:hover {
   margin-top: 1rem;
 }
 
+.compliance-note {
+  color: var(--muted);
+  margin: 0.5rem 0 1.5rem;
+  max-width: 50ch;
+}
+
 .metric {
   padding: 1rem;
   background: var(--panel);
@@ -276,6 +282,15 @@ a:hover {
   margin-top: 0.4rem;
 }
 
+.disclaimer {
+  margin-top: 1.5rem;
+  color: var(--muted);
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1rem 1.25rem;
+}
+
 .timeline {
   list-style: none;
   padding: 0;
@@ -308,6 +323,30 @@ a:hover {
   font-weight: 800;
 }
 
+.acquisition-section {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.acquisition-section h3 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+.acquisition-section ul {
+  padding-left: 1.25rem;
+  color: var(--text);
+  margin: 0.75rem 0 0;
+}
+
+.acquisition-section li + li {
+  margin-top: 0.4rem;
+}
+
 .contact-form {
   padding: 1.5rem;
   background: var(--panel);
@@ -315,6 +354,30 @@ a:hover {
   border: 1px solid var(--border);
   box-shadow: var(--shadow);
   max-width: 800px;
+}
+
+.faq-list {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0 0;
+  display: grid;
+  gap: 1rem;
+}
+
+.faq-list li {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1rem 1.25rem;
+}
+
+.faq-list strong {
+  display: block;
+  margin-bottom: 0.35rem;
+}
+
+.faq-list span {
+  color: var(--muted);
 }
 
 .form-grid {
