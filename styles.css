@@ -250,6 +250,21 @@ a:hover {
   margin: 0;
 }
 
+.notice {
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 12px 16px;
+  margin: 12px 0;
+  font-weight: 600;
+  color: var(--text);
+  background: rgba(92, 124, 250, 0.08);
+}
+
+.notice.warning {
+  background: rgba(109, 211, 255, 0.08);
+  border-color: rgba(109, 211, 255, 0.4);
+}
+
 .grid.cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
