@@ -4,6 +4,7 @@ A minimal, asset-free landing page highlighting KINDX services. The project uses
 
 ## Structure
 - `index.html` — markup for the landing page sections (hero, solutions, approach, contact) with inline SVG logos.
+- `legal.html` — compliant token disclaimer and data-provider notes for KINDX.
 - `styles.css` — styling for layout, typography, and responsive behavior.
 - `script.js` — small enhancements for navigation toggling, smooth scrolling, and form feedback.
 
