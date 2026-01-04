@@ -282,6 +282,41 @@ a:hover {
   margin-top: 0.4rem;
 }
 
+.resource-grid {
+  margin: 1.5rem 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1rem;
+}
+
+.resource-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 1.25rem 1.5rem;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.resource-label {
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--accent-2);
+}
+
+.mono {
+  display: inline-block;
+  padding: 0.4rem 0.6rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  font-family: "DM Mono", "Roboto Mono", "Fira Code", monospace;
+  font-size: 0.95rem;
+  word-break: break-all;
+}
+
 .disclaimer {
   margin-top: 1.5rem;
   color: var(--muted);
