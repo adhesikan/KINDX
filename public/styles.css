@@ -309,6 +309,20 @@ a:hover {
   color: var(--text);
 }
 
+.transparency-callout {
+  gap: 1.25rem;
+}
+
+.callout-actions {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 0.75rem;
+}
+
+.callout-actions .button {
+  width: 100%;
+}
+
 .grid.cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
