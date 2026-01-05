@@ -7,6 +7,8 @@ A minimal, asset-free landing page highlighting KINDX services. The project uses
 - `legal.html` — compliant token disclaimer and data-provider notes for KINDX.
 - `styles.css` — styling for layout, typography, and responsive behavior.
 - `script.js` — small enhancements for navigation toggling, smooth scrolling, and form feedback.
+- `robots.txt` — search-engine crawling instructions to avoid extra 404 noise.
+- `health.txt` — simple uptime probe endpoint returning `ok`.
 
 ## Running locally
 Open `index.html` in your browser. No build steps or dependencies are required.
