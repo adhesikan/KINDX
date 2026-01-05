@@ -32,6 +32,7 @@
         <li><a href="#solutions">How it works</a></li>
         <li><a href="#approach">Tokenomics</a></li>
         <li><a href="#contact">Roadmap &amp; FAQ</a></li>
+        <li><a href="/founding/">Founding</a></li>
       </ul>
     </nav>
   </header>
@@ -53,6 +54,14 @@
         <div class="hero-actions">
           <a class="button primary" href="#solutions">See how it works</a>
           <a class="button ghost" href="#get-kindx">Get KINDX</a>
+          <a class="button ghost" href="/founding/">Founding Participants</a>
+        </div>
+        <div class="hero-badge">
+          <img src="/public/founding-badge.svg" alt="Founding Member badge" />
+          <div class="badge-text">
+            <span>Founding Participants Program</span>
+            <small>Join the utility-first KINDX community on Base</small>
+          </div>
         </div>
         <p class="compliance-note">You do not need to purchase KINDX to participate — tokens may be earned or received through community programs.</p>
         <div class="hero-metrics" role="list">
@@ -109,13 +118,17 @@
       <div class="resource-grid">
         <div class="resource-card">
           <div class="resource-label">Token contract (Base)</div>
-          <code class="mono">0xda91EBC59B26e8B77D17DA20c3Bc9169954504eE</code>
-          <a class="button ghost" href="https://basescan.org/address/0xda91EBC59B26e8B77D17DA20c3Bc9169954504eE" target="_blank" rel="noopener noreferrer">View on BaseScan</a>
+          <code class="mono" id="home-contract" data-token-contract></code>
+          <div class="button-row">
+            <button class="button primary" type="button" data-copy-target="#home-contract">Copy address</button>
+            <a class="button ghost" data-link="basescan-token" target="_blank" rel="noopener noreferrer">View on BaseScan</a>
+            <a class="button ghost" data-link="uniswap-buy" target="_blank" rel="noopener noreferrer">Buy on Uniswap</a>
+          </div>
         </div>
         <div class="resource-card">
           <div class="resource-label">Liquidity position</div>
           <p class="lede">View the active KINDX pool on Uniswap to see current liquidity and participation.</p>
-          <a class="button primary" href="https://app.uniswap.org/positions/v4/base/910900" target="_blank" rel="noopener noreferrer">View Uniswap position</a>
+          <a class="button primary" data-link="uniswap-position" target="_blank" rel="noopener noreferrer">View Uniswap position</a>
         </div>
       </div>
       <p class="disclaimer">KINDX is a community utility token intended for participation, tipping, and community engagement. Cryptocurrency involves risk and tokens may lose value. No financial return is promised or implied.</p>
@@ -285,11 +298,14 @@
       <a href="#solutions">How it works</a>
       <a href="#approach">Tokenomics</a>
       <a href="#contact">Roadmap &amp; FAQ</a>
+      <a href="/founding/">Founding Participants</a>
+      <a data-link="basescan-token" target="_blank" rel="noopener noreferrer">Token Contract</a>
+      <a data-link="uniswap-buy" target="_blank" rel="noopener noreferrer">Buy on Uniswap</a>
       <a href="legal.html">Legal</a>
     </div>
     <p class="footer-note">KINDX is a community-driven token for tipping and giving. This is not financial advice—always verify contracts, use trusted wallets, and contribute responsibly.</p>
   </footer>
 
-  <script src="script.js"></script>
+  <script type="module" src="script.js"></script>
 </body>
 </html>

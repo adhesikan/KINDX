@@ -143,6 +143,29 @@ a:hover {
   margin: 1.5rem 0;
 }
 
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  border-radius: 12px;
+  background: linear-gradient(135deg, rgba(92, 124, 250, 0.08), rgba(109, 211, 255, 0.12));
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.hero-badge img {
+  width: 64px;
+  height: 64px;
+}
+
+.hero-badge .badge-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.125rem;
+  font-weight: 700;
+}
+
 .button {
   display: inline-flex;
   align-items: center;
@@ -265,6 +288,27 @@ a:hover {
   border-color: rgba(109, 211, 255, 0.4);
 }
 
+.info-callout {
+  border-radius: 14px;
+  padding: 1.5rem;
+  background: linear-gradient(135deg, rgba(92, 124, 250, 0.07), rgba(109, 211, 255, 0.07));
+  border: 1px solid var(--border);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  align-items: start;
+}
+
+.info-callout .info-label {
+  font-size: 0.95rem;
+  color: var(--muted);
+}
+
+.info-callout .info-value {
+  font-weight: 700;
+  color: var(--text);
+}
+
 .grid.cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -330,6 +374,13 @@ a:hover {
   font-family: "DM Mono", "Roboto Mono", "Fira Code", monospace;
   font-size: 0.95rem;
   word-break: break-all;
+}
+
+.button-row {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-top: 0.5rem;
 }
 
 .disclaimer {
@@ -495,9 +546,65 @@ a:hover {
   margin: 0;
 }
 
+.transparency-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1rem;
+}
+
+.transparency-card {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.04);
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.transparency-card h4 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.disclaimer-card {
+  border-radius: 16px;
+  padding: 1.5rem;
+  border: 1px solid rgba(248, 113, 113, 0.4);
+  background: linear-gradient(135deg, rgba(248, 113, 113, 0.08), rgba(251, 146, 60, 0.08));
+  color: #fff;
+  font-weight: 700;
+}
+
+.toast {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #0f172a;
+  color: #e2e8f0;
+  padding: 0.75rem 1rem;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  z-index: 50;
+}
+
+.toast.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 @media (max-width: 800px) {
   .nav-toggle {
     display: inline-flex;
+  }
+
+  .hero-badge {
+    width: 100%;
+    justify-content: flex-start;
   }
 
   .nav-links {
