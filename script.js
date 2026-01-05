@@ -3,12 +3,35 @@ import { TOKEN_CONTRACT, BASESCAN_TOKEN_URL, UNISWAP_BUY_URL, UNISWAP_POSITION_U
 const navToggle = document.querySelector('.nav-toggle');
 const navLinks = document.querySelector('.nav-links');
 
+const setNavState = (expanded) => {
+  navToggle?.setAttribute('aria-expanded', String(expanded));
+  navLinks?.setAttribute('aria-expanded', String(expanded));
+};
+
 if (navToggle && navLinks) {
+  setNavState(navToggle.getAttribute('aria-expanded') === 'true');
+
+  const closeNav = () => setNavState(false);
+
   navToggle.addEventListener('click', () => {
     const expanded = navToggle.getAttribute('aria-expanded') === 'true';
-    const nextState = !expanded;
-    navToggle.setAttribute('aria-expanded', String(nextState));
-    navLinks.setAttribute('aria-expanded', String(nextState));
+    setNavState(!expanded);
+  });
+
+  document.addEventListener('click', (event) => {
+    if (navToggle.getAttribute('aria-expanded') !== 'true') return;
+    const isToggle = navToggle.contains(event.target);
+    const isMenu = navLinks.contains(event.target);
+    if (!isToggle && !isMenu) {
+      closeNav();
+    }
+  });
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && navToggle.getAttribute('aria-expanded') === 'true') {
+      closeNav();
+      navToggle.focus();
+    }
   });
 }
 
@@ -20,12 +43,7 @@ links.forEach((link) => {
     if (targetElement) {
       event.preventDefault();
       targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      if (navLinks) {
-        navLinks.setAttribute('aria-expanded', 'false');
-      }
-      if (navToggle) {
-        navToggle.setAttribute('aria-expanded', 'false');
-      }
+      setNavState(false);
     }
   });
 });
