@@ -50,16 +50,28 @@ links.forEach((link) => {
 
 const form = document.querySelector('.contact-form');
 if (form) {
+  const submitButton = form.querySelector('button[type="submit"]');
+  const defaultSubmitText = submitButton?.textContent?.trim() || 'Send message';
+  let resetTimer = null;
+
   form.addEventListener('submit', (event) => {
     event.preventDefault();
     form.reset();
-    const submitButton = form.querySelector('button[type="submit"]');
-    if (submitButton) {
-      submitButton.textContent = 'Message received';
-      setTimeout(() => {
-        submitButton.textContent = 'Send message';
-      }, 2000);
+
+    if (!submitButton) return;
+
+    if (resetTimer) {
+      clearTimeout(resetTimer);
+      resetTimer = null;
     }
+
+    submitButton.disabled = true;
+    submitButton.textContent = 'Message received';
+
+    resetTimer = setTimeout(() => {
+      submitButton.textContent = defaultSubmitText;
+      submitButton.disabled = false;
+    }, 2000);
   });
 }
 
